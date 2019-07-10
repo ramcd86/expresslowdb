@@ -7,14 +7,83 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const low = require('lowdb')
 const FileAsync = require('lowdb/adapters/FileAsync')
+const jwt = require("jsonwebtoken");
+// const jwtStrategry  = require("./authstrat/jwt");
+const JwtStrategy = require('passport-jwt').Strategy;
+const ExtractJwt = require('passport-jwt').ExtractJwt;
+const opts = {}
+
+opts.jwtFromRequest = ExtractJwt.fromHeader('authorization');
+opts.secretOrKey = 'SECRET_KEY'; //normally store this in process.env.secret
+
+const strat = new JwtStrategy(opts, (jwt_payload, done) => {
+    if (jwt_payload.email === user.email) {
+        return done(null, true)
+    }
+    return done(null, false)
+}) 
+passport.use(strat);
+
+
 const app = express();
 
+let user = {};
 
 app.use(express.static(path.join(__dirname, '../dist')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
+app.post('/login', (req, res) => {
+    let { email, password } = req.body;
+    console.log(user)
+    console.log(req.body);
+    if (email === user.email) {
+        if (password === user.password) { //the password compare would normally be done using bcrypt.
+            // opts.expiresIn = 120;  //token expires in 2min
+            const localOpts = {
+                expiresIn: 120
+            }
+            const secret = "SECRET_KEY" //normally stored in process.env.secret
+            const token = jwt.sign({ email }, secret, localOpts);
+            return res.status(200).json({
+                message: "Auth Passed",
+                token
+            })
+        }
+    }
+    return res.status(401).json({ message: "Auth Failed" })
+});
+
+
+app.get("/protected", passport.authenticate('jwt', { session: false }), (req, res) => {
+    console.log(req, res)
+    return res.status(200).send("YAY! this is a protected Route")
+})
+
+// const JwtStrategy = require('passport-jwt').Strategy;
+// const ExtractJwt = require('passport-jwt').ExtractJwt;
+// const opts = {}
+// opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+// opts.secretOrKey = 'SECRET_KEY'; //normally store this in process.env.secret
+
+// module.exports = new JwtStrategy(opts, (jwt_payload, done) => {
+//     if (jwt_payload.email === user.email) {
+//         return done(null, true)
+//     }
+//     return done(null, false)
+// }) 
+
+
+
+
+const authSource = new FileAsync('./db/secure.json')
+low(authSource).then(db => {
+    user = db.get('auth').value();
+    console.log(user);
+})
 
 const adapter = new FileAsync('./db/data.json')
 low(adapter)
@@ -57,10 +126,6 @@ low(adapter)
     // Set db default values
     return db.defaults({ posts: [] }).write()
   })
-//   .then(() => {
-//     app.listen(3000, () => console.log('listening on port 3000'))
-//   })
-
 
 
 const port = process.env.PORT || 4200;
