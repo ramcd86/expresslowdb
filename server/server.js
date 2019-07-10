@@ -91,7 +91,7 @@ low(adapter)
     // Routes
     // GET /posts/:id
 
-    app.get('/posts', (req, res) => {
+    app.get('/posts', passport.authenticate('jwt', { session: false }), (req, res) => {
         const post = db.get('posts')
           .value()
         res.send(post)
