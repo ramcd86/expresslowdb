@@ -1,3 +1,4 @@
+
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
@@ -24,7 +25,6 @@ const adapter = new FileAsync('./db/data.json');
 //     return done(null, false)
 // }) 
 // dotenv.load();
-console.log(process.env.FOO);
 passport.use(strat);
 
 

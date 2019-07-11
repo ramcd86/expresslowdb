@@ -1,0 +1,275 @@
+{
+  "pageTypes": {
+    
+    "landingPage": {
+      "pageName": "pnm-landing-page",
+      "contentZones": {
+        "topContentAreaTypes": [
+          "bnm-jumbotron-block",
+          "bnm-header-block"
+        ],
+        "midContentAreaTypes": [
+          "bnm-banner-block",
+          "bnm-teaser-block",
+          "bnm-imagewithtext-block",
+          "bnm-image-block",
+          "bnm-newsletter-block",
+          "bnm-form-block",
+          "bnm-bloglist-block"
+        ],
+        "bottomContentAreatypes": [
+          "bnm-footer-block"
+        ]
+      }
+    },
+    
+    "standardPage": {
+      "pageName": "pnm-standard-page",
+      "contentZones": {
+        "topContentAreaTypes": [
+          "bnm-banner-block",
+          "bnm-header-block"
+        ],
+        "midContentAreaTypes": [
+          "bnm-banner-block",
+          "bnm-teaser-block",
+          "bnm-imagewithtext-block",
+          "bnm-image-block",
+          "bnm-newsletter-block",
+          "bnm-form-block",
+          "bnm-bloglist-block"
+        ],
+        "bottomContentAreatypes": [
+          "bnm-footer-block"
+        ]
+      }
+    },
+    
+    "blogPage": {
+      "pageName": "pnm-blog-page",
+      "contentZones": {
+        "topContentAreaTypes": [
+          "bnm-banner-block",
+          "bnm-header-block"
+        ],
+        "midContentAreaTypes": [
+          "bnm-imagewithtext-block",
+          "bnm-image-block",
+          "bnm-text-block"
+        ],
+        "bottomContentAreatypes": [
+          "bnm-footer-block"
+        ]
+      }
+    },
+    
+    "blogListingPage": {
+      "pageName": "pnm-bloglisting-page",
+      "contentZones": {
+        "topContentAreaTypes": [
+          "bnm-banner-block",
+          "bnm-header-block"
+        ],
+        "midContentAreaTypes": [
+          "bnm-imagewithtext-block",
+          "bnm-image-block",
+          "bnm-text-block",
+          "bnm-bloglisting-block"
+        ],
+        "bottomContentAreatypes": [
+          "bnm-footer-block"
+        ]
+      }
+    },
+    
+    "aboutPage": {
+      "pageName": "pnm-about-page",
+      "contentZones": {
+        "topContentAreaTypes": [
+          "bnm-banner-block",
+          "bnm-header-block"
+        ],
+        "midContentAreaTypes": [
+          "bnm-imagewithtext-block",
+          "bnm-image-block",
+          "bnm-text-block",
+          "bnm-newsletter-block",
+          "bnm-teaser-block",
+          "bnm-newsletter-block",
+          "bnm-linklist-block",
+          "bnm-bloglist-block"
+        ],
+        "bottomContentAreatypes": [
+          "bnm-footer-block"
+        ]
+      }
+    },
+    
+    "contactPage": {
+      "pageName": "pnm-contact-page",
+      "contentZones": {
+        "topContentAreaTypes": [
+          "bnm-banner-block",
+          "bnm-header-block"
+        ],
+        "midContentAreaTypes": [
+          "bnm-imagewithtext-block",
+          "bnm-image-block",
+          "bnm-text-block",
+          "bnm-newsletter-block",
+          "bnm-teaser-block",
+          "bnm-newsletter-block",
+          "bnm-linklist-block",
+          "bnm-bloglist-block",
+          "bnm-form-block"
+        ],
+        "bottomContentAreatypes": [
+          "bnm-footer-block"
+        ]
+      }
+    }
+    
+  },
+  "blockTypes": {
+    
+    "jumbotronBlock": {
+      "blockName": "bnm-jumbotron-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "jumboImage": "",
+        "preTitle": "",
+        "title": "",
+        "subTitle": "",
+        "buttons": [{
+          "buttonText": "",
+          "buttonLink": ""
+        }]
+      }
+    },
+    
+    "bannerBlock": {
+      "blockName": "bnm-banner-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "bannerImage": "",
+        "preTitle": "",
+        "title": "",
+        "subTitle": "",
+        "buttons": [{
+          "buttonText": "",
+          "buttonLink": ""
+        }]
+      }
+    },
+    
+    "headerBlock": {
+      "blockName": "bnm-header-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "bannerImage": "",
+        "preTitle": "",
+        "title": "",
+        "subTitle": ""
+      }
+    },
+    
+    "footerBlock": {
+      "blockName": "bnm-footer-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "contentAreaTypes": [
+          "bnm-linklist-block",
+          "bnm-bloglist-block",
+          "bnm-text-block"
+        ]
+      }
+    },
+    
+    "teaserBlock": {
+      "blockName": "bnm-teaser-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "teaserImage": "",
+        "teaserText": "",
+        "buttons": [{
+          "buttonText": "",
+          "buttonLink": ""
+        }]
+      }
+    },
+    
+    "imageWithTextBlock": {
+      "blockName": "bnm-imagewithtext-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "image": "",
+        "text": "",
+        "hAlign": ["left", "right"],
+        "vAlign": ["top", "bottom"]
+      }
+    },
+    
+    "imageBlock": {
+      "blockName": "bnm-image-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "image": ""
+      }
+    },
+    
+    "newsletterBlock": {
+      "blockName": "bnm-newsletter-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "title": "",
+        "subTitle": "",
+        "contentAreaTypes": [
+          "bnm-form-block"
+        ]
+      }
+    },
+    
+    "formBlock": {
+      "blockName": "bnm-form-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "title": "",
+        "subTitle": "",
+        "name": "",
+        "email": "",
+        "message": ""
+      }
+    },
+    
+    "linkListBlock": {
+      "blockName": "bnm-linklist-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "linkList": [{
+          "linkText": "",
+          "linkHref": ""
+        }]
+      }
+    },
+    
+    "blogListBlock": {
+      "blockName": "bnm-bloglist-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "blogList": [{
+          "blogText": "",
+          "blogHref": ""
+        }]
+      }
+    },
+    
+    "textBlock": {
+      "blockName": "bnm-text-block",
+      "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+      "properties": {
+        "title": "",
+        "text": ""
+      }
+    }
+  }
+}
