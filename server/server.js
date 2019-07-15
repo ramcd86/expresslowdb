@@ -51,9 +51,9 @@ app.post('/login', (req, res) => {
   console.log(req.body);
   if (email === user.email) {
     if (password === user.password) { //the password compare would normally be done using bcrypt.
-      // opts.expiresIn = 120;  //token expires in 2min
+      // opts.expiresIn = 86400;  //token expires in 1 day
       const localOpts = {
-        expiresIn: 120
+        expiresIn: 86400
       }
       const secret = "SECRET_KEY" //normally stored in process.env.secret
       const token = jwt.sign({

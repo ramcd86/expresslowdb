@@ -9,10 +9,10 @@ export const httpGet = (url, payload) => {
         request.onreadystatechange = function (e) {
             if (request.readyState === 4) {
                 if (request.status === 200) {
-                    console.log(request.response);
+                    // console.log(request.response);
                     resolve(request.response);
                 } else {
-                    console.log(request.status);
+                    // console.log(request.status);
                     reject(request.status);
                 }
             }
@@ -29,20 +29,24 @@ export const httpGet = (url, payload) => {
 export const httpPost = (url, payload) => {
     return new Promise((resolve, reject) => {
         const request = new XMLHttpRequest();
+        let headers = new Headers();
+        headers.append('Access-Control-Allow-Origin', 'http://localhost:8080');
+        headers.append('Access-Control-Allow-Credentials', 'true');
         request.timeout = 2000;
-        request.open('POST', url, true);
+        request.open('POST', url, headers);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify(loginPackage));
+        request.send(JSON.stringify(payload));
         request.onreadystatechange = (e) => {
             if (request.readyState === 4) {
                 if (request.status === 200) {
-                    responseObject = JSON.parse(request.response);
-                    authPackage.token = responseObject.token
-                    console.log(authPackage);
+                    // responseObject = JSON.parse(request.response);
+                    // authPackage.token = responseObject.token
+                    // console.log(authPackage);
+                    // console.log(request.response);
                     resolve(request.response);
                 } else {
-                    console.log(request.response);
-                    reject(request.status);
+                    // console.log(request.response);
+                    resolve(request.status);
                 }
             }
         };
@@ -124,4 +128,8 @@ export const sha256 = (ascii) => {
         }
     }
     return result;
+}
+
+export const config = {
+    API: 'http://localhost:4200'
 }
