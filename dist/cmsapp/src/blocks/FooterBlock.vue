@@ -1,13 +1,11 @@
 <template>
-    <div>
-
-    </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-    name: 'bnm-footer-block'
-}
+  name: "bnm_footer_block"
+};
 </script>
 
 <style lang="sass" scoped>

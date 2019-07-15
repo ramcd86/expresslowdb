@@ -1,13 +1,11 @@
 <template>
-    <div>
-
-    </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-    name: 'bnm-bloglist-block'
-}
+  name: "bnm_bloglist_block"
+};
 </script>
 
 <style lang="sass" scoped>

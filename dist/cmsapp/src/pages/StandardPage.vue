@@ -1,13 +1,11 @@
 <template>
-    <div>
-
-    </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-    name: 'pnm-standard-page'
-}
+  name: "pnm_standard_page"
+};
 </script>
 
 <style lang="sass" scoped>

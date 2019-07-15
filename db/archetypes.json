@@ -2,139 +2,139 @@
   "archetypes": {
     "pageTypes": {
       "landingPage": {
-        "pageName": "pnm-landing-page",
+        "pageName": "pnm_landing_page",
         "contentZones": {
           "topContentAreaTypes": [
-            "bnm-jumbotron-block",
-            "bnm-header-block"
+            "bnm_jumbotron_block",
+            "bnm_header_block"
           ],
           "midContentAreaTypes": [
-            "bnm-banner-block",
-            "bnm-teaser-block",
-            "bnm-imagewithtext-block",
-            "bnm-image-block",
-            "bnm-newsletter-block",
-            "bnm-form-block",
-            "bnm-bloglist-block"
+            "bnm_banner_block",
+            "bnm_teaser_block",
+            "bnm_imagewithtext_block",
+            "bnm_image_block",
+            "bnm_newsletter_block",
+            "bnm_form_block",
+            "bnm_bloglist_block"
           ],
           "bottomContentAreatypes": [
-            "bnm-footer-block"
+            "bnm_footer_block"
           ]
         }
       },
-      
+
       "standardPage": {
-        "pageName": "pnm-standard-page",
+        "pageName": "pnm_standard_page",
         "contentZones": {
           "topContentAreaTypes": [
-            "bnm-banner-block",
-            "bnm-header-block"
+            "bnm_banner_block",
+            "bnm_header_block"
           ],
           "midContentAreaTypes": [
-            "bnm-banner-block",
-            "bnm-teaser-block",
-            "bnm-imagewithtext-block",
-            "bnm-image-block",
-            "bnm-newsletter-block",
-            "bnm-form-block",
-            "bnm-bloglist-block"
+            "bnm_banner_block",
+            "bnm_teaser_block",
+            "bnm_imagewithtext_block",
+            "bnm_image_block",
+            "bnm_newsletter_block",
+            "bnm_form_block",
+            "bnm_bloglist_block"
           ],
           "bottomContentAreatypes": [
-            "bnm-footer-block"
+            "bnm_footer_block"
           ]
         }
       },
-      
+
       "blogPage": {
-        "pageName": "pnm-blog-page",
+        "pageName": "pnm_blog_page",
         "contentZones": {
           "topContentAreaTypes": [
-            "bnm-banner-block",
-            "bnm-header-block"
+            "bnm_banner_block",
+            "bnm_header_block"
           ],
           "midContentAreaTypes": [
-            "bnm-imagewithtext-block",
-            "bnm-image-block",
-            "bnm-text-block"
+            "bnm_imagewithtext_block",
+            "bnm_image_block",
+            "bnm_text_block"
           ],
           "bottomContentAreatypes": [
-            "bnm-footer-block"
+            "bnm_footer_block"
           ]
         }
       },
-      
+
       "blogListingPage": {
-        "pageName": "pnm-bloglisting-page",
+        "pageName": "pnm_bloglisting_page",
         "contentZones": {
           "topContentAreaTypes": [
-            "bnm-banner-block",
-            "bnm-header-block"
+            "bnm_banner_block",
+            "bnm_header_block"
           ],
           "midContentAreaTypes": [
-            "bnm-imagewithtext-block",
-            "bnm-image-block",
-            "bnm-text-block",
-            "bnm-bloglisting-block"
+            "bnm_imagewithtext_block",
+            "bnm_image_block",
+            "bnm_text_block",
+            "bnm_bloglisting_block"
           ],
           "bottomContentAreatypes": [
-            "bnm-footer-block"
+            "bnm_footer_block"
           ]
         }
       },
-      
+
       "aboutPage": {
-        "pageName": "pnm-about-page",
+        "pageName": "pnm_about_page",
         "contentZones": {
           "topContentAreaTypes": [
-            "bnm-banner-block",
-            "bnm-header-block"
+            "bnm_banner_block",
+            "bnm_header_block"
           ],
           "midContentAreaTypes": [
-            "bnm-imagewithtext-block",
-            "bnm-image-block",
-            "bnm-text-block",
-            "bnm-newsletter-block",
-            "bnm-teaser-block",
-            "bnm-newsletter-block",
-            "bnm-linklist-block",
-            "bnm-bloglist-block"
+            "bnm_imagewithtext_block",
+            "bnm_image_block",
+            "bnm_text_block",
+            "bnm_newsletter_block",
+            "bnm_teaser_block",
+            "bnm_newsletter_block",
+            "bnm_linklist_block",
+            "bnm_bloglist_block"
           ],
           "bottomContentAreatypes": [
-            "bnm-footer-block"
+            "bnm_footer_block"
           ]
         }
       },
-      
+
       "contactPage": {
-        "pageName": "pnm-contact-page",
+        "pageName": "pnm_contact_page",
         "contentZones": {
           "topContentAreaTypes": [
-            "bnm-banner-block",
-            "bnm-header-block"
+            "bnm_banner_block",
+            "bnm_header_block"
           ],
           "midContentAreaTypes": [
-            "bnm-imagewithtext-block",
-            "bnm-image-block",
-            "bnm-text-block",
-            "bnm-newsletter-block",
-            "bnm-teaser-block",
-            "bnm-newsletter-block",
-            "bnm-linklist-block",
-            "bnm-bloglist-block",
-            "bnm-form-block"
+            "bnm_imagewithtext_block",
+            "bnm_image_block",
+            "bnm_text_block",
+            "bnm_newsletter_block",
+            "bnm_teaser_block",
+            "bnm_newsletter_block",
+            "bnm_linklist_block",
+            "bnm_bloglist_block",
+            "bnm_form_block"
           ],
           "bottomContentAreatypes": [
-            "bnm-footer-block"
+            "bnm_footer_block"
           ]
         }
       }
-      
+
     },
     "blockTypes": {
-      
+
       "jumbotronBlock": {
-        "blockName": "bnm-jumbotron-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_jumbotron_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "jumboImage": "",
           "preTitle": "",
@@ -146,10 +146,10 @@
           }]
         }
       },
-      
+
       "bannerBlock": {
-        "blockName": "bnm-banner-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_banner_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "bannerImage": "",
           "preTitle": "",
@@ -161,10 +161,10 @@
           }]
         }
       },
-      
+
       "headerBlock": {
-        "blockName": "bnm-header-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_header_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "bannerImage": "",
           "preTitle": "",
@@ -172,22 +172,22 @@
           "subTitle": ""
         }
       },
-      
+
       "footerBlock": {
-        "blockName": "bnm-footer-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_footer_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "contentAreaTypes": [
-            "bnm-linklist-block",
-            "bnm-bloglist-block",
-            "bnm-text-block"
+            "bnm_linklist_block",
+            "bnm_bloglist_block",
+            "bnm_text_block"
           ]
         }
       },
-      
+
       "teaserBlock": {
-        "blockName": "bnm-teaser-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_teaser_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "teaserImage": "",
           "teaserText": "",
@@ -197,10 +197,10 @@
           }]
         }
       },
-      
+
       "imageWithTextBlock": {
-        "blockName": "bnm-imagewithtext-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_imagewithtext_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "image": "",
           "text": "",
@@ -208,30 +208,30 @@
           "vAlign": ["top", "bottom"]
         }
       },
-      
+
       "imageBlock": {
-        "blockName": "bnm-image-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_image_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "image": ""
         }
       },
-      
+
       "newsletterBlock": {
-        "blockName": "bnm-newsletter-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_newsletter_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "title": "",
           "subTitle": "",
           "contentAreaTypes": [
-            "bnm-form-block"
+            "bnm_form_block"
           ]
         }
       },
-      
+
       "formBlock": {
-        "blockName": "bnm-form-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_form_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "title": "",
           "subTitle": "",
@@ -240,10 +240,10 @@
           "message": ""
         }
       },
-      
+
       "linkListBlock": {
-        "blockName": "bnm-linklist-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_linklist_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "linkList": [{
             "linkText": "",
@@ -251,10 +251,10 @@
           }]
         }
       },
-      
+
       "blogListBlock": {
-        "blockName": "bnm-bloglist-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_bloglist_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "blogList": [{
             "blogText": "",
@@ -262,10 +262,10 @@
           }]
         }
       },
-      
+
       "textBlock": {
-        "blockName": "bnm-text-block",
-        "dimensions": ["full", "three-quarters", "two-thirds", "half", "one-third", "one-quarter"],
+        "blockName": "bnm_text_block",
+        "dimensions": ["full", "three_quarters", "two_thirds", "half", "one_third", "one_quarter"],
         "properties": {
           "title": "",
           "text": ""

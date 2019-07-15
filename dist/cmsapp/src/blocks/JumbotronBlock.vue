@@ -1,13 +1,11 @@
 <template>
-    <div>
-
-    </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-    name: 'bnm-jumbotron-block'
-}
+  name: "bnm_jumbotron_block"
+};
 </script>
 
 <style lang="sass" scoped>

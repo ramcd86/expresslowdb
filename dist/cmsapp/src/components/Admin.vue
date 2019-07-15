@@ -101,11 +101,11 @@ export default {
           securityMutators.mutateAuth({
             actionType: 'setToken',
             payload: response.token
-          })
+          });
           securityMutators.mutateAuth({
             actionType: 'setLoggedIn',
             payload: true
-          })
+          });
           this.getArchetypes();
           document.cookie = `cdata=cmsauthcookie_@_${response.token}; expires=${new Date(Date.now() + 86400 * 1000)}; path=/;`
         }
