@@ -4,7 +4,8 @@ export const securityStore = Vue.observable({
     auth: {
         isLoggedIn: false,
         name: 'authorization',
-        token: ''
+        token: '',
+        archetypes: {}
     }
 })
 
@@ -16,6 +17,9 @@ export const securityMutators = {
             break;
             case 'setToken':
                 securityStore.auth.token = action.payload;
+            break;
+            case 'setArchetypes': 
+                securityStore.auth.archetypes = action.payload;
             break;
         }
     }

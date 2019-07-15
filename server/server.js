@@ -10,21 +10,10 @@ const FileAsync = require('lowdb/adapters/FileAsync')
 const jwt = require("jsonwebtoken");
 const strat = require("./authstrat/jwt");
 const authSource = new FileAsync('./db/secure.json');
+const archetypes = new FileAsync('./db/archetypes.json');
 const adapter = new FileAsync('./db/data.json');
-// const JwtStrategy = require('passport-jwt').Strategy;
-// const ExtractJwt = require('passport-jwt').ExtractJwt;
-// const opts = {}
 
-// opts.jwtFromRequest = ExtractJwt.fromHeader('authorization');
-// opts.secretOrKey = 'SECRET_KEY'; //normally store this in process.env.secret
 
-// const strat = new JwtStrategy(opts, (jwt_payload, done) => {
-//     if (jwt_payload.email === user.email) {
-//         return done(null, true)
-//     }
-//     return done(null, false)
-// }) 
-// dotenv.load();
 passport.use(strat);
 
 
@@ -93,6 +82,15 @@ app.get("/protected", passport.authenticate('jwt', {
 
 
 
+low(archetypes).then(arc => {
+  app.get('/archetypes', passport.authenticate('jwt', {
+    session: false
+  }), (req, res) => {
+    const post = arc.get('archetypes')
+      .value()
+    res.send(post)
+  })
+})
 
 
 low(authSource).then(db => {

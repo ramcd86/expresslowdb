@@ -1,8 +1,8 @@
-export const httpGet = (url, payload) => {
-    const headers = {
-        name: '',
-        value: ''
-    }
+export const httpGet = (url, payload = { tokenName: '', token: '' }) => {
+    // const headers = {
+    //     name: '',
+    //     value: ''
+    // }
     return new Promise((resolve, reject) => {
         const request = new XMLHttpRequest();
         request.timeout = 2000;
@@ -21,7 +21,7 @@ export const httpGet = (url, payload) => {
             reject("The operation timed out.");
         };
         request.open('get', url, true);
-        request.setRequestHeader(authPackage.tokenName, authPackage.token);
+        request.setRequestHeader(payload.tokenName, payload.token);
         request.send();
     });
 };
