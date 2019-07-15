@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div v-if="state.isLoggedIn === false" class="row">
+
       <div class="col-6 m-auto mt-lg-5 pt-4 pb-4 card form-group text-left">
         <div class="pb-3">
         <label for="email">Email Address</label>
@@ -15,14 +16,15 @@
           <div class="col-12 text-center pb-2"><button class="btn btn-primary" @click="login()">Login</button></div>
         </div>
         <div v-if="securityFailure == 'is-invalid'" class="row">
-          
           <div class="col-12 text-center pb-2">
             <hr class="pb-2"/>
             {{this.loginStatus}}</div>
         </div>
       </div>
+
     </div>
     <div v-if="state.isLoggedIn === true" class="row">
+
       <div class="col-6 m-auto mt-lg-5 pt-4 pb-4 card form-group text-left">
         <div>
         <label for="email">Email Address</label>
@@ -37,6 +39,7 @@
         <hr>
         <div class="text-center is-valid">{{this.loginStatus}}</div>
       </div>
+      
     </div>
   </div>
 </template>
@@ -50,7 +53,6 @@ export default {
   data() {
     return {
       state: securityStore.auth,
-      // mutators: securityMutators,
       admin: "Admin",
       preHashUser: '',
       preHashPassword: '',
@@ -78,13 +80,11 @@ export default {
   },
   mounted() {
     console.log("Mounted");
-    console.log(this.state.isLoggedIn);
   },
   methods: {
     login: function() {
       httpPost(`${config.API}/login`, {email: this.hashedUser, password: this.hashedPassword}).then((resp) => {
         const response = JSON.parse(resp);
-        console.log('response', response);
         if (response == 401) {
           this.loginStatus = "login failed.";
           this.securityFailure = "is-invalid";
@@ -119,7 +119,6 @@ export default {
           actionType: 'setLoggedIn',
           payload: true
         })
-        console.log('state', this.state);
         }
       }
     },
@@ -133,7 +132,6 @@ export default {
           actionType: 'setLoggedIn',
           payload: false
         })
-      console.log(document.cookie);
     }
   },
   watch: {
